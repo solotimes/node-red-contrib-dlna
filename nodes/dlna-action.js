@@ -15,6 +15,7 @@ module.exports = function(RED) {
             }
 
             try {
+                await MediaRenderer.Scan();
                 let client = new MediaRenderer(device);
 
                 switch (msg.payload.action) {
